@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <title>Login</title>
+</head>
+<body onload="setTimeout('hide()', 1500)">
+    <div class="preload" id="hide">
+        <img src="https://cdn.dribbble.com/users/2882885/screenshots/7861928/media/a4c4da396c3da907e7ed9dd0b55e5031.gif" alt="" class="catgif">
+    </div>
+    <div class="background main">
+        <form class="login-container" id="logincon" action="http://127.0.0.1/finals/login.php" method="post">
+            <h1>LOGIN</h1>
+            <label for="email">Email</label>
+            <input type="text"  id="email" name="email" autocomplete="off" required>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" autocomplete="off" required>
+            <button>Login</button>
+            <a class="link" href="signup.html">Don't Have An Account? Register One</a>
+        </form>
+    </div>
+</body>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            width: 100vw;
+            height: 100vh;    
+        }
+
+        #main{
+            display: none;
+        }
+
+        .preload{
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #282828;
+        }
+
+        .catgif{
+            width: 20%;
+        }
+    </style>
+    <script>
+        function hide(){
+            document.getElementById("hide").style.display = "none";
+            document.getElementById("main").style.display = "block";
+        }
+    </script>
+</html>
